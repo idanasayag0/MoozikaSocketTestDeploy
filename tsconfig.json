@@ -7,7 +7,7 @@
         "dom.iterable",
         "esnext"
       ],
-      "types": ["node", "stripe-v3", "vite/client"],
+      "types": ["vite/client"],
       "allowJs": true,
       "skipLibCheck": true,
       "esModuleInterop": true,
