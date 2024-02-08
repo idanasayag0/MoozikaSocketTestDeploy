@@ -89,7 +89,7 @@ const Signup = () => {
           })
           .then((res) => res.data)
           .catch((err) => {
-            message.error(err.response.data.error);
+            message.error(err.response.data.message);
             setIsLoading(false);
             return;
           });

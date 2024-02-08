@@ -62,6 +62,8 @@ const Comment = ({
     validateUser();
   }, []);
 
+  const split = date.split("T");
+
   return (
     <Paper
       elevation={3}
@@ -131,7 +133,7 @@ const Comment = ({
             </Box>
           )}
           <Typography variant="caption" color="textSecondary" marginLeft="auto">
-            {date}
+            {split[0] + ", " + split[1].split(".")[0]}
           </Typography>
         </Box>
       </Box>
