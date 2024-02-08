@@ -113,7 +113,7 @@ export default function SignInModal({
       .catch((err) => {});
 
     setTimeout(() => {
-      window.location.href = "https://deployement-testing-front.vercel.app/";
+      window.location.href = "https://moozikatestsocket.netlify.app/";
     }, 300);
   };
   const onFailure = (response) => {

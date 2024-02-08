@@ -122,7 +122,7 @@ const Signup = () => {
 
       await new Promise((resolve) => setTimeout(resolve, 500));
       setIsLoading(false);
-      window.location.href = "https://deployement-testing-front.vercel.app/";
+      window.location.href = "https://moozikatestsocket.netlify.app/";
     }
   };
 
