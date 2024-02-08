@@ -100,6 +100,9 @@ export default function Navbar() {
       agent: false,
       upgrade: false,
       rejectUnauthorized: false,
+      extraHeaders: {
+        "Access-Control-Allow-Origin": "*",
+      },
     });
 
     socket.on("cart", ({ cart, token, numberInCart }) => {
