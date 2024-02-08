@@ -40,8 +40,6 @@ import { SongType } from "../../types/index";
 import { useToken } from "../../hooks/useToken";
 import { usePost } from "../../hooks/usePost";
 
-const socket = io(SERVER_URL);
-
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -94,6 +92,15 @@ export default function Navbar() {
   useEffect(() => {
     checkLoggedIn();
     getCartSize();
+    const socket = io(SERVER_URL, {
+      reconnectionDelay: 1000,
+      reconnection: true,
+      reconnectionAttempts: 10,
+      transports: ["websocket"],
+      agent: false,
+      upgrade: false,
+      rejectUnauthorized: false,
+    });
 
     socket.on("cart", ({ cart, token, numberInCart }) => {
       if (token === useToken()) {
