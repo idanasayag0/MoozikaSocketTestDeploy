@@ -213,7 +213,8 @@ export default function SignInModal({
               </Typography>
 
               <GoogleLogin
-                clientId={import.meta.env.VITE_APP_GOOGLE_CLIENT_ID}
+                // clientId={import.meta.env.VITE_APP_GOOGLE_CLIENT_ID}
+                clientId="325742096395-4oippo2lmk7mkgb1hjhim2qv5pjqk6on.apps.googleusercontent.com"
                 onSuccess={onSuccessFromGoogle}
                 onFailure={onFailure}
                 cookiePolicy="single_host_origin"
