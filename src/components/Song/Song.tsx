@@ -17,8 +17,8 @@ import { handleRequestWithToken } from "../../utils";
 import { SongType, UserType } from "../../types/index";
 import { useToken } from "../../hooks/useToken.js";
 import { usePost } from "../../hooks/usePost.js";
-import { SERVER_PORT_URL, USERS } from "../../constants/index.jsx";
-const socket = io(SERVER_PORT_URL);
+import { SERVER_URL, USERS } from "../../constants/index.jsx";
+const socket = io(SERVER_URL);
 
 function Song({
   title,

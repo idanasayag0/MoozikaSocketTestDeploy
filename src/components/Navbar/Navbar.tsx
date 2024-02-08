@@ -20,7 +20,7 @@ import {
 } from "@mui/material";
 import {
   AUTH,
-  SERVER_PORT_URL,
+  SERVER_URL,
   SONGS,
   StyledAutocomplete,
   USERS,
@@ -40,7 +40,7 @@ import { SongType } from "../../types/index";
 import { useToken } from "../../hooks/useToken";
 import { usePost } from "../../hooks/usePost";
 
-const socket = io(SERVER_PORT_URL);
+const socket = io(SERVER_URL);
 
 export default function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);

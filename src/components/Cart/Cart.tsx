@@ -12,9 +12,9 @@ import { handleRequestWithToken } from "../../utils";
 import { OrderType, SongType } from "../../types";
 import { useToken } from "../../hooks/useToken";
 import { usePost } from "../../hooks/usePost";
-import { ORDERS, SERVER_PORT_URL, SONGS } from "../../constants";
+import { ORDERS, SERVER_URL, SONGS } from "../../constants";
 
-const socket = io(SERVER_PORT_URL);
+const socket = io(SERVER_URL);
 
 const Cart = () => {
   const navigate = useNavigate();
