@@ -7,14 +7,14 @@ import axios from "axios";
 import { message } from "antd";
 import { Grid, Card, Divider, Typography, Button, Box } from "@mui/material";
 
-import io from "socket.io-client";
+// import io from "socket.io-client";
 import { handleRequestWithToken } from "../../utils";
 import { OrderType, SongType } from "../../types";
 import { useToken } from "../../hooks/useToken";
 import { usePost } from "../../hooks/usePost";
 import { ORDERS, SERVER_URL, SONGS } from "../../constants";
 
-const socket = io(SERVER_URL);
+// const socket = io(SERVER_URL);
 
 const Cart = () => {
   const navigate = useNavigate();
@@ -58,11 +58,11 @@ const Cart = () => {
     const newCart = cartIds.filter((itemId) => itemId !== id);
     localStorage.setItem("cart", JSON.stringify(newCart));
     setCartItems((prev) => prev?.filter((item: SongType) => item._id !== id));
-    socket.emit("cart", {
-      token: useToken(),
-      cart: newCart,
-      numberInCart: newCart.length,
-    });
+    // socket.emit("cart", {
+    //   token: useToken(),
+    //   cart: newCart,
+    //   numberInCart: newCart.length,
+    // });
 
     if (newCart.length === 0) {
       setCartExist(false);
@@ -85,11 +85,11 @@ const Cart = () => {
         setCartItems([]);
         setCartExist(false);
 
-        socket.emit("cart", {
-          token: useToken(),
-          cart: [],
-          numberInCart: 0,
-        });
+        // socket.emit("cart", {
+        //   token: useToken(),
+        //   cart: [],
+        //   numberInCart: 0,
+        // });
         setTimeout(() => {
           navigate("/");
         }, 750);

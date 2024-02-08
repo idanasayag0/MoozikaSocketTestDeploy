@@ -12,13 +12,13 @@ import Loader from "../loader/loader";
 import Box from "@mui/material/Box";
 import { message } from "antd";
 
-import io from "socket.io-client";
+// import io from "socket.io-client";
 import { handleRequestWithToken } from "../../utils";
 import { SongType, UserType } from "../../types/index";
 import { useToken } from "../../hooks/useToken.js";
 import { usePost } from "../../hooks/usePost.js";
 import { SERVER_URL, USERS } from "../../constants/index.jsx";
-const socket = io(SERVER_URL);
+// const socket = io(SERVER_URL);
 
 function Song({
   title,
@@ -58,11 +58,11 @@ function Song({
       const cart = JSON.parse(localStorage.getItem("cart"));
       cart.push(songId);
       if (!handleRequestWithToken()) return navigate("/");
-      socket.emit("cart", {
-        token: useToken(),
-        cart: cart,
-        numberInCart: cart.length,
-      });
+      // socket.emit("cart", {
+      //   token: useToken(),
+      //   cart: cart,
+      //   numberInCart: cart.length,
+      // });
 
       localStorage.setItem("cart", JSON.stringify(cart));
     }

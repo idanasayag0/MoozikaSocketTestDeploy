@@ -34,7 +34,7 @@ import css from "./styles.module.css";
 import Chat from "../chat/Chat";
 import { message } from "antd";
 
-import io from "socket.io-client";
+// import io from "socket.io-client";
 import { handleRequestWithToken } from "../../utils/index.js";
 import { SongType } from "../../types/index";
 import { useToken } from "../../hooks/useToken";
@@ -92,24 +92,24 @@ export default function Navbar() {
   useEffect(() => {
     checkLoggedIn();
     getCartSize();
-    const socket = io(SERVER_URL, {
-      reconnectionDelay: 1000,
-      reconnection: true,
-      reconnectionAttempts: 10,
-      transports: ["websocket"],
-      agent: false,
-      upgrade: false,
-      rejectUnauthorized: false,
-      extraHeaders: {
-        "Access-Control-Allow-Origin": "*",
-      },
-    });
+    // const socket = io(SERVER_URL, {
+    //   reconnectionDelay: 1000,
+    //   reconnection: true,
+    //   reconnectionAttempts: 10,
+    //   transports: ["websocket"],
+    //   agent: false,
+    //   upgrade: false,
+    //   rejectUnauthorized: false,
+    //   extraHeaders: {
+    //     "Access-Control-Allow-Origin": "*",
+    //   },
+    // });
 
-    socket.on("cart", ({ cart, token, numberInCart }) => {
-      if (token === useToken()) {
-        setCart(numberInCart);
-      }
-    });
+    // socket.on("cart", ({ cart, token, numberInCart }) => {
+    //   if (token === useToken()) {
+    //     setCart(numberInCart);
+    //   }
+    // });
   }, []);
 
   const handleProfileMenuOpen = (event) => {
