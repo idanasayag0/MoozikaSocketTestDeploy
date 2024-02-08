@@ -1,0 +1,22 @@
+.cartText{
+color: white;
+display: flex;
+justify-content: space-between;
+margin-top: 0.5rem;
+}
+.total{
+    color:white;
+    margin-top: 3rem;
+}
+.title{
+    color:white;
+    margin-top: 1rem;
+}
+.checkoutButton{
+    margin: 2rem 0.5rem 2rem 0.5rem;
+    border-radius: 10px;
+    outline: white;
+}
+.checkoutButton:hover{
+    cursor: pointer;
+}

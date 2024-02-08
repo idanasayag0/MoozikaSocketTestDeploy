@@ -1,0 +1,20 @@
+.title {
+  color: white;
+}
+.priceText {
+  color: #c0c0c0;
+}
+.priceSection {
+  display: flex;
+  column-gap: 0.5rem;
+  align-items: center;
+}
+.trashIcon:hover {
+  fill: red;
+}
+
+.albumImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
