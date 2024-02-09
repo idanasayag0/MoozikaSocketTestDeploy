@@ -135,7 +135,7 @@ const Cart = () => {
             </div>
             <div className={classes.cartText}>
               <Typography variant="h5">Discount:</Typography>
-              <Typography variant="h6">Free</Typography>
+              <Typography variant="h6">{"0%"}</Typography>
             </div>
             <div className={classes.cartText}>
               <Typography variant="h5">Total:</Typography>
